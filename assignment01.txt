@@ -1,0 +1,50 @@
+1. Try the statements below in REPL. Please answer whether they are correct or not and explain the reasons.
+
+a. val id=9527
+True. 變數id被視為integer
+
+b. var number : Int = 5.6
+False.number資料型態應該是Int, 而非floating
+
+c. var title = "Hello Kotlin!"
+True. title存入字串Hello Kolin!
+
+d. val content : String = null
+False. content料型態勢String而非null type
+除非將String -> String? Nullable type
+
+e. val number : Double? = 556.6
+True. number是nullable Double, 可以存入null 和非null的值
+
+f. var list: List<String>? = listOf(null, null)
+False. 變數list可以放入list的值的資料型態只能是“字串”，若要符合
+var list: List<String>? = null (應該要改成這樣），或是改成List<String?> 
+
+g. var list: List<String?>? = listOf("Wayne", "Chen") 
+True. 這個list是屬於nullable string，也就是可以接受字串和null值 ，且此list也是nullable ，所以說-> listOf(" string", null) or (null, null)也是可以被接受的不會跳error
+
+h. list.size
+True.當list不是nullable list的時候可以使用，例如：var list: List<String?> = listOf("apple", "bear")/ var list: List<String?> = listOf("apple", null)
+
+i. list?.size
+True. 當是nullable list的時候，就一定要用此方法，避免跳error.
+但不論是不是nullable list也可以使用list?.size 避免遇到value = null而跳錯誤
+
+----------------
+
+
+2.
+C.Your grace
+因為字串長度為39, when會去檢查後面的條件，39會落在第二個條件中篋印出your grace
+
+----------------
+
+
+3.
+D.印出的變數中主要包含unit[i]和value 
+->這兩個主要來自array的index和 {lambda expression去計算值} ;設定一個有6個長度的array,其中array的index會是it,使得每次以1000^it次方相乘得到value
+-> for中利用withIndex()對array同時取（index, value)
+然後將value轉換成Long type(只保留整數部分），且斷行印出
+
+
+
