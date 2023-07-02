@@ -44,7 +44,7 @@ C.Your grace
 D.印出的變數中主要包含unit[i]和value 
 ->這兩個主要來自array的index和 {lambda expression去計算值} ;設定一個有6個長度的array,其中array的index會是it,使得每次以1000^it次方相乘得到value
 -> for中利用withIndex()對array同時取（index, value)
-然後將value轉換成Long type(只保留整數部分），且斷行印出
+然後將value轉換成Long type(64bits)，且斷行印出
 
 
 
